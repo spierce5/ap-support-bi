@@ -78,6 +78,8 @@ This is an example of how to list things you need to use the software and how to
 
 - Python 3.11.5 - Download and install from <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
 - Git - Download and install from <a href="https://github.com/git-guides/install-git">https://github.com/git-guides/install-git</a>
+- Microsoft Visual C++ 14.0 - Download and install from <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/</a>
+  - In the Visual Studio installer, you only need to select "Desktop development with C++"
 
 ### Installation
 
@@ -96,36 +98,94 @@ This is an example of how to list things you need to use the software and how to
 
 ### Setup
 
+Several further setup steps are required before use. Two additional files will need to be created:
+
+- .env
+- app_data.json
+
+You can copy from .env.example and app_data.json.example respectively.
+
+#### .env
+
+In order to connect to Salesforce, you will need to update the environment variables in .env as such:
+
+<table>
+  <thead style="border: 1px solid #333;">
+    <tr>
+      <th colspan="2">/.env</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #333;">Key</td>
+      <td style="border: 1px solid #333;">Description</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333;">SF_INSTANCE</td>
+      <td style="border: 1px solid #333;">Your organization's Salesforce domain</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333;">SF_USERNAME</td>
+      <td style="border: 1px solid #333;">Your Salesforce username found in Setup</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333;">SF_PASSWORD</td>
+      <td style="border: 1px solid #333;">Your Salesforce password</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333;">SF_TOKEN</td>
+      <td style="border: 1px solid #333;">Your Salesforce security token</td>
+    </tr>
+  </tbody>
+</table>
+
+You will need to set a password for your Salesforce account on the Setup page. Once your password is set, you should receive an email with your security token, otherwise, you can generate a new security token manually. Read more at <a href="https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5">https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5</a>
+
+#### app_data.json
+
+The content of app_data.json must be valid json and must contain a key named "team_members". Within team_members, you will need to add the following information:
+
+<table>
+  <thead style="border: 1px solid #333;">
+    <tr>
+      <th colspan="2">/app_data.json - team_members</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #333;">Key</td>
+      <td style="border: 1px solid #333;">Description</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333;">name</td>
+      <td style="border: 1px solid #333;">Full name as used in Salesforce</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333;">preferred_name</td>
+      <td style="border: 1px solid #333;">Preferred first name e.g. Sam rather than Samuel</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333;">birthday</td>
+      <td style="border: 1px solid #333;">Birthday in yyyy-mm-dd format (year will not be used, but must be a valid year)</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333;">active</td>
+      <td style="border: 1px solid #333;">True if a current member of the team, otherwise, False</td>
+    </tr>
+  </tbody>
+</table>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
-
-See the [open issues](https://github.com/spierce5/assetpoint-weekly-bi/issues) for a full list of proposed features (and known issues).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
 ## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -150,51 +210,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - sam.pierce@aptean.com
+Sam Pierce - sam.pierce@aptean.com
 
 Project Link: [https://github.com/spierce5/assetpoint-weekly-bi](https://github.com/spierce5/assetpoint-weekly-bi)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- []()
-- []()
-- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/spierce5/assetpoint-weekly-bi.svg?style=for-the-badge
-[contributors-url]: https://github.com/spierce5/assetpoint-weekly-bi/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/spierce5/assetpoint-weekly-bi.svg?style=for-the-badge
-[forks-url]: https://github.com/spierce5/assetpoint-weekly-bi/network/members
-[stars-shield]: https://img.shields.io/github/stars/spierce5/assetpoint-weekly-bi.svg?style=for-the-badge
-[stars-url]: https://github.com/spierce5/assetpoint-weekly-bi/stargazers
-[issues-shield]: https://img.shields.io/github/issues/spierce5/assetpoint-weekly-bi.svg?style=for-the-badge
-[issues-url]: https://github.com/spierce5/assetpoint-weekly-bi/issues
 [license-shield]: https://img.shields.io/github/license/spierce5/assetpoint-weekly-bi.svg?style=for-the-badge
-[license-url]: https://github.com/spierce5/assetpoint-weekly-bi/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
+[license-url]: https://github.com/spierce5/assetpoint-weekly-bi/blob/main/LICENSE
