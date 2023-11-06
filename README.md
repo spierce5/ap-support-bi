@@ -38,21 +38,18 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#setup">Setup</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -74,7 +71,7 @@ To get a local copy up and running follow these steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Please ensure you have the following requirements installed before going further. Failure to do so will likely prevent you from properly installing the module.
 
 - Python 3.11.5 - Download and install from <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
 - Git - Download and install from <a href="https://github.com/git-guides/install-git">https://github.com/git-guides/install-git</a>
