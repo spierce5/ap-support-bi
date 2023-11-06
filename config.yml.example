@@ -1,0 +1,36 @@
+root_directory: "C:/Users/username/path/to/directory"
+figure_paths:
+  weekly_split: "Images/weeklySplit.png"
+  support_pie_chart: "Images/pie_Support_Backlog.png"
+  non_support_pie_chart: "Images/pie_Non-Support_Backlog.png"
+image_paths:
+  bg_aptean_title: "Images/bgTitle.jpg"
+  bg_aptean_standard: "Images/bgStandard.jpg"
+logging_config:
+  disable_existing_loggers: true
+  formatters:
+    simple:
+      datefmt: "%m-%d-%Y %H:%M:%S"
+      format: "%(asctime)s - %(levelname)s - %(message)s"
+  handlers:
+    console:
+      class: logging.StreamHandler
+      formatter: simple
+      level: DEBUG
+      stream: ext://sys.stdout
+    file:
+      class: logging.FileHandler
+      filename: application.log
+      formatter: simple
+  loggers:
+    main:
+      handlers:
+        - console
+        - file
+      level: INFO
+      propagate: false
+  root:
+    handlers:
+      - console
+    level: WARNING
+  version: 1
