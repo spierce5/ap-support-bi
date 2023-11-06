@@ -1,5 +1,0 @@
-11-05-2023 19:12:15 - ERROR - An error occurred testing logging: object of type 'NoneType' has no len()
-Traceback (most recent call last):
-  File "c:\Users\spierce1\Documents\Python_Automation\AssetPoint_Weekly_BI\data_actions.py", line 382, in test_logging
-    temp = len(temp)
-TypeError: object of type 'NoneType' has no len()
