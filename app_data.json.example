@@ -1,0 +1,22 @@
+{
+  "team_members": {
+    "1": {
+      "name": "John Appleseed",
+      "preferred_name": "Johnny",
+      "birthday": "2000-11-30",
+      "active": true
+    },
+    "2": {
+      "name": "George Clooney",
+      "preferred_name": "George",
+      "birthday": "2000-05-29",
+      "active": true
+    },
+    "3": {
+      "name": "James Dean",
+      "preferred_name": "Jimmy",
+      "birthday": "2000-05-11",
+      "active": false
+    }
+  }
+}
