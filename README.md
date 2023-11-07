@@ -77,6 +77,7 @@ Please ensure you have the following requirements installed before going further
 - Git - Download and install from <a href="https://github.com/git-guides/install-git">https://github.com/git-guides/install-git</a>
 - Microsoft Visual C++ 14.0 - Download and install from <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/</a>
   - In the Visual Studio installer, you only need to select "Desktop development with C++"
+- Microsoft Power BI - Download and install from the Microsoft store or at <a href="https://powerbi.microsoft.com/en-us/downloads/">https://powerbi.microsoft.com/en-us/downloads/</a>
 
 ### Installation
 
@@ -171,6 +172,10 @@ The content of app_data.json must be valid json and must contain a key named "te
     </tr>
   </tbody>
 </table>
+
+#### pbi_data.py
+
+Lastly, you will need to directly set the path in pbi_data.py to the project directory.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
