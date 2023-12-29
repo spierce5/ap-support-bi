@@ -7,3 +7,4 @@ Requests==2.31.0
 simple_salesforce==1.11.6
 tinydb==4.8.0
 matplotlib==3.8.1
+msal==1.26.0
