@@ -231,9 +231,9 @@ def get_case_data():
         df['Opened This Week'] = df.apply(opened_this_week, axis=1)
         df['Closed This Week'] = df.apply(closed_this_week, axis=1)
         df['Quarter'] = df['Date/Time Opened'].dt.quarter
-        df['Quarter'] = df['Date/Time Closed'].dt.quarter
+        # df['Quarter'] = df['Date/Time Closed'].dt.quarter
         df['Year'] = df['Date/Time Opened'].dt.year
-        df['Year'] = df['Date/Time Closed'].dt.year
+        # df['Year'] = df['Date/Time Closed'].dt.year
         df['Age'] = df.apply(lambda row: TODAY - row['Date/Time Opened'], axis=1).dt.days
 
         SUPPORT_MEMBERS = get_support_members()
@@ -334,7 +334,7 @@ def get_weekly_case_data(data):
 
     return df_cases
 
-def get_account_temperaments():
+def get_account_temperaments(case_data=None):
     try:
         QUERY = '''
         SELECT 
@@ -363,8 +363,16 @@ def get_account_temperaments():
                 return ""
         account_temperament['Temperament Notes'] = account_temperament['Temperament Notes'].apply(lambda x: re.sub("(<br>)|(<[^>]*>)", convert_html, str(x)))
 
-        case_data = get_case_data()
+        if case_data is None:
+            case_data = get_case_data()
         df = case_data.merge(account_temperament, left_on="Account Name", right_on="Name", how="right")
+        df['Open'] = df['Open'].fillna(0).astype('int64')
+        df['Closed'] = df['Closed'].fillna(0).astype('int64')
+        df['Opened This Week'] = df['Opened This Week'].fillna(0).astype('int64')
+        df['Closed This Week'] = df['Closed This Week'].fillna(0).astype('int64')
+        df['Quarter'] = df['Quarter'].fillna(0).astype('int64')
+        df['Year'] = df['Year'].fillna(0).astype('int64')
+        df['Age'] = df['Age'].fillna(0).astype('int64')
     except Exception as err:
         logger.exception("Error retrieving account temperaments: %s", err)
 
@@ -384,6 +392,7 @@ def get_calendar():
         for i in range(0, len(date_range), 7):
             cal.loc[len(cal), :] = date_range['Date'].tolist()[i:i+7]
         calendar = cal
+        calendar = calendar.apply(lambda r: r.apply(lambda d: d.date().isoformat()))
     except Exception as err:
         logger.exception("Error retrieving calendar: %s", err)
 

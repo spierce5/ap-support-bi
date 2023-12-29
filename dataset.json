@@ -1,0 +1,115 @@
+{
+  "name": "AssetPoint_Weekly_BI",
+  "defaultMode": "Push",
+  "tables": [
+    {
+      "name": "case_data",
+      "columns": [
+        { "name": "Case Owner", "dataType": "string" },
+        { "name": "Is Support Member", "dataType": "string" },
+        { "name": "CreatedById", "dataType": "string" },
+        { "name": "Case Number", "dataType": "string" },
+        { "name": "Severity", "dataType": "string" },
+        { "name": "Service Team", "dataType": "string" },
+        { "name": "Account Name", "dataType": "string" },
+        { "name": "Type", "dataType": "string" },
+        { "name": "Subject", "dataType": "string" },
+        { "name": "Date/Time Opened", "dataType": "DateTime" },
+        { "name": "Last Action Date", "dataType": "DateTime" },
+        { "name": "Case Last Modified Date", "dataType": "DateTime" },
+        { "name": "Hours_Since_Creation__c", "dataType": "Decimal" },
+        { "name": "Contact", "dataType": "string" },
+        { "name": "Status", "dataType": "string" },
+        { "name": "Sub-Status", "dataType": "string" },
+        { "name": "Case Survey Sent", "dataType": "string" },
+        { "name": "Date/Time Closed", "dataType": "DateTime" },
+        { "name": "Escalation Owner", "dataType": "string" },
+        { "name": "Escalation Date", "dataType": "DateTime" },
+        { "name": "Escalation Status", "dataType": "string" },
+        { "name": "Escalation Details / Comments", "dataType": "string" },
+        { "name": "LastViewedDate", "dataType": "DateTime" },
+        { "name": "Open", "dataType": "Int64" },
+        { "name": "Closed", "dataType": "Int64" },
+        { "name": "Opened This Week", "dataType": "Int64" },
+        { "name": "Closed This Week", "dataType": "Int64" },
+        { "name": "Quarter", "dataType": "Int64" },
+        { "name": "Year", "dataType": "Int64" },
+        { "name": "Age", "dataType": "Int64" }
+      ]
+    },
+    {
+      "name": "account_temperaments",
+      "columns": [
+        { "name": "Name", "dataType": "string" },
+        { "name": "Product Line", "dataType": "string" },
+        { "name": "Temperament", "dataType": "string" },
+        { "name": "Temperament Notes", "dataType": "string" },
+        { "name": "Case Owner", "dataType": "string" },
+        { "name": "Is Support Member", "dataType": "string" },
+        { "name": "CreatedById", "dataType": "string" },
+        { "name": "Case Number", "dataType": "string" },
+        { "name": "Severity", "dataType": "string" },
+        { "name": "Service Team", "dataType": "string" },
+        { "name": "Account Name", "dataType": "string" },
+        { "name": "Type", "dataType": "string" },
+        { "name": "Subject", "dataType": "string" },
+        { "name": "Date/Time Opened", "dataType": "DateTime" },
+        { "name": "Last Action Date", "dataType": "DateTime" },
+        { "name": "Case Last Modified Date", "dataType": "DateTime" },
+        { "name": "Hours_Since_Creation__c", "dataType": "Decimal" },
+        { "name": "Contact", "dataType": "string" },
+        { "name": "Status", "dataType": "string" },
+        { "name": "Sub-Status", "dataType": "string" },
+        { "name": "Case Survey Sent", "dataType": "string" },
+        { "name": "Date/Time Closed", "dataType": "DateTime" },
+        { "name": "Escalation Owner", "dataType": "string" },
+        { "name": "Escalation Date", "dataType": "DateTime" },
+        { "name": "Escalation Status", "dataType": "string" },
+        { "name": "Escalation Details / Comments", "dataType": "string" },
+        { "name": "LastViewedDate", "dataType": "DateTime" },
+        { "name": "Open", "dataType": "Int64" },
+        { "name": "Closed", "dataType": "Int64" },
+        { "name": "Opened This Week", "dataType": "Int64" },
+        { "name": "Closed This Week", "dataType": "Int64" },
+        { "name": "Quarter", "dataType": "Int64" },
+        { "name": "Year", "dataType": "Int64" },
+        { "name": "Age", "dataType": "Int64" }
+      ]
+    },
+    {
+      "name": "birthdays",
+      "columns": [
+        { "name": "Name", "dataType": "string" },
+        { "name": "Birthday", "dataType": "DateTime" },
+        { "name": "Countdown (Days)", "dataType": "Int64" }
+      ]
+    },
+    {
+      "name": "date_time",
+      "columns": [
+        { "name": "DATE", "dataType": "Int64" },
+        { "name": "DAY_OF_WEEK", "dataType": "Int64" },
+        { "name": "END_DATE", "dataType": "DateTime" },
+        { "name": "START_DATE", "dataType": "DateTime" },
+        { "name": "TODAY", "dataType": "DateTime" },
+        { "name": "DATE_RANGE", "dataType": "string" }
+      ]
+    },
+    {
+      "name": "survey_data",
+      "columns": [
+        { "name": "Account Name", "dataType": "string" },
+        { "name": "Case Number", "dataType": "string" },
+        { "name": "Case Owner", "dataType": "string" },
+        { "name": "Contact Name", "dataType": "string" },
+        { "name": "Customer Comments", "dataType": "string" },
+        { "name": "Date/Time Closed", "dataType": "DateTime" },
+        { "name": "Overall Satisfaction", "dataType": "string" },
+        { "name": "Question: Communication", "dataType": "string" },
+        { "name": "Question: Problem Diagnosis", "dataType": "string" },
+        { "name": "Question: Product Knowledge", "dataType": "string" },
+        { "name": "Question: Professionalism", "dataType": "string" }
+      ]
+    }
+  ]
+}
