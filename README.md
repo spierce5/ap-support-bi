@@ -24,7 +24,7 @@
 <h3 align="center">AssetPoint Weekly BI</h3>
 
   <p align="center">
-    A module for fetching data from the salesforce api to populate the Power BI dashboard for the AssetPoint Support weekly meeting.
+    A module for fetching data from the salesforce api to populate a Power BI dashboard with Support metrics.
     <br />
     <a href="https://github.com/spierce5/assetpoint-weekly-bi/issues">Report Bug</a>
     ·
