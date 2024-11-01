@@ -57,7 +57,7 @@
 
 ## About The Project
 
-A module for fetching data from the salesforce api to populate the Power BI dashboard for the AssetPoint Support weekly meeting.
+A module for fetching data from the salesforce api to populate a Power BI dashboard with Support metrics.
 
 This was originally developed for generating a weekly PowerPoint, but has been modified to be used as a service to fetch data for Power BI.
 
